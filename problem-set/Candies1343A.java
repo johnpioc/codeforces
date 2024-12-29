@@ -9,15 +9,16 @@ public class Candies1343A {
         for (int i = 0; i < testCases; i++) {
             int currentValue = Integer.parseInt(reader.readLine());
 
-            int denominator = 3;
             int power = 2;
 
-            while (currentValue % denominator != 0) {
-                denominator += (int) Math.pow(2, power);
+            while (true) {
+                int denominator = (1 << power) - 1;
+                if (currentValue % denominator == 0) {
+                    System.out.println(currentValue / denominator);
+                    break;
+                }
                 power++;
             }
-
-            System.out.println(currentValue / denominator);
         }
     }
 }
