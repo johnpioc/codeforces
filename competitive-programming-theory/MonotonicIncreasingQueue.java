@@ -15,7 +15,7 @@ public class MonotonicIncreasingQueue {
     }
 
     public static void main(String[] args) {
-        int arr[] = {5, 3, 8, 2, 6, 1, 9};
+        int arr[] = {5, 3, 1, 9, 8, 2, 6 };
         int n = arr.length;
 
         Deque<Integer> queue = increasingMonotonicQueue(arr, n);
