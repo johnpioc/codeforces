@@ -42,12 +42,17 @@ public class DisjointSetUnion {
     public static void main(String[] args) {
         DisjointSetUnion dsu = new DisjointSetUnion(10);
 
-        dsu.union(1,2);
-        dsu.union(2,3);
-        dsu.union(4,5);
+        dsu.union(1,4);
+        dsu.union(4,1);
+        dsu.union(2,6);
+        dsu.union(3,2);
+        dsu.union(6,3);
+        dsu.union(5,5);
 
-        System.out.println(dsu.isConnected(1,3));
-        System.out.println(dsu.isConnected(1,4));
-        System.out.println(dsu.find(3));
+        System.out.println(dsu.isConnected(1,1));
+        System.out.println(dsu.isConnected(2,2));
+        System.out.println(dsu.isConnected(3,3));
+        System.out.println(dsu.isConnected(4,4));
+        System.out.println(dsu.isConnected(5,5));
     }
 }
